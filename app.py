@@ -5,7 +5,7 @@ app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"]="sqlite:///project.db"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"]=False
 db = SQLAlchemy(app)
-
+#this is the database creration class
 class todo(db.Model):
     sno = db.Column(db.Integer,primary_key=True)
     title = db.Column(db.String(100),nullable=False)
